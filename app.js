@@ -12,6 +12,6 @@ document.getElementById("login").addEventListener("click", async (e) => {
     }
   } catch (error) {
     console.error("Login error:", error);
+    alert("An error occurred. See console.");
   }
 });
-
