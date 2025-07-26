@@ -1,0 +1,13 @@
+<!-- login.html -->
+<input id="userID" />
+<button onclick="validate()">Login</button>
+
+<script>
+  async function validate() {
+    const response = await fetch("users.json");
+    const users = await response.json();
+    const id = document.getElementById("userID").value;
+    if (users[id]) window.location.href = "dashboard.html";
+    else alert("ID not recognized.");
+  }
+</script>
