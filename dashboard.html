@@ -87,6 +87,20 @@
     window.location.href = "login.html";
   }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const userID = params.get("id");
+
+  if (!userID) {
+    // No ID present — send back to login
+    window.location.href = "login.html";
+  } else {
+    // Valid ID — proceed
+    document.body.innerHTML = `<h2>Welcome, ${userID}!</h2>`;
+  }
+});
+</script>
 
 
 </body>
