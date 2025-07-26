@@ -1,3 +1,17 @@
 <input type="text" id="userID" placeholder="Enter your ID" />
 <button onclick="loginUser()">Login</button>
 <script src="login.js"></script>
+<script>
+function login() {
+  const inputID = document.getElementById("userID").value.trim();
+
+  // Optional: Validate input
+  if (!inputID) {
+    alert("Please enter a valid ID.");
+    return;
+  }
+
+  // Redirect to dashboard with ID in URL
+  window.location.href = `dashboard.html?id=${encodeURIComponent(inputID)}`;
+}
+</script>
