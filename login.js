@@ -8,7 +8,7 @@ function loginUser() {
   if (validIDs.includes(enteredID)) {
     localStorage.setItem("loggedIn", "true");
     localStorage.setItem("userID", enteredID);
-    window.location.href = "index.html"; // or your content page
+    window.location.href = "dashboard.html"; // or your content page
   } else {
     alert("Invalid ID. Try again.");
   }
