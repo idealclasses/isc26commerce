@@ -87,5 +87,12 @@
 <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
 <script src="firebase-config.js"></script>
 <script src="app.js"></script>
+<script>
+  const userID = localStorage.getItem("userID");
+  if (!userID) {
+    window.location.href = "login.html";
+  }
+</script>
+
 
 
